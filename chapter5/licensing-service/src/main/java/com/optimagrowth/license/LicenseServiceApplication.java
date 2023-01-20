@@ -11,7 +11,7 @@ import org.springframework.web.servlet.LocaleResolver;
 import org.springframework.web.servlet.i18n.SessionLocaleResolver;
 
 @SpringBootApplication
-@RefreshScope
+@RefreshScope // 强制重新读取配置文件
 public class LicenseServiceApplication {
 
 	public static void main(String[] args) {

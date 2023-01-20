@@ -10,7 +10,8 @@ import com.optimagrowth.license.model.Organization;
 
 @Component
 public class OrganizationRestTemplateClient {
-    
+
+    // KeycloakRestTemplate: 可处理令牌的传播
     @Autowired
     private KeycloakRestTemplate restTemplate;
 

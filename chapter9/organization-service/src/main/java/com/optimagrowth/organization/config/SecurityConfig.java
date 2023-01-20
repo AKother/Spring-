@@ -21,6 +21,7 @@ import org.springframework.security.web.authentication.session.SessionAuthentica
 @EnableGlobalMethodSecurity(jsr250Enabled = true)
 public class SecurityConfig extends KeycloakWebSecurityConfigurerAdapter {
 
+    // 限制只有通过身份验证才可以访问
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         super.configure(http);

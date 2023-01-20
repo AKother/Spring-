@@ -40,8 +40,7 @@ public class LicenseService {
 
 	public License updateLicense(License license){
 		licenseRepository.save(license);
-
-		return license.withComment(config.getProperty());
+		return license.withComment(config.getProperty()); // 获取配置
 	}
 
 	public String deleteLicense(String licenseId){

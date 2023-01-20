@@ -20,7 +20,9 @@ public class OrganizationDiscoveryClient {
     private DiscoveryClient discoveryClient;
 
     public Organization getOrganization(String organizationId) {
+        // 此处实例化RestTemplate，将不会调用LoadBalancer
         RestTemplate restTemplate = new RestTemplate();
+
         //获取组织服务的所有实例的列表
         List<ServiceInstance> instances = discoveryClient.getInstances("organization-service");
 
@@ -33,8 +35,9 @@ public class OrganizationDiscoveryClient {
                 restTemplate.exchange(
                         serviceUri,
                         HttpMethod.GET,
-                        null, Organization.class, organizationId);
-
+                        null,
+                        Organization.class,
+                        organizationId);
         return restExchange.getBody();
     }
 }

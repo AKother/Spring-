@@ -1,8 +1,8 @@
 spring:
     application:
-     name: licensing-service 
+     name: licensing-service  # 服务名称，以便Spring Cloud Config发现
     profiles:
-      active: dev
+      active: dev # 环境选择
     cloud:
         config: 
-            uri: http://configserver:8071
+            uri: http://configserver:8071 # 指定SpringCloudConfig服务端位置

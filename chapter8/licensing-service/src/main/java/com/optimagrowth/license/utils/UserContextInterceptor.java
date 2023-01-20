@@ -12,6 +12,9 @@ import java.io.IOException;
 
 public class UserContextInterceptor implements ClientHttpRequestInterceptor {
     private static final Logger logger = LoggerFactory.getLogger(UserContextInterceptor.class);
+
+    // 该方法在服务调用之前调用
+    // 保证header中的关联ID被传播
     @Override
     public ClientHttpResponse intercept(
             HttpRequest request, byte[] body, ClientHttpRequestExecution execution)

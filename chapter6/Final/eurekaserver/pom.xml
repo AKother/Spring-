@@ -43,6 +43,7 @@
                 </exclusion>
             </exclusions>
 		</dependency>
+        <!--        用loadBalancer-->
 		<dependency>
 		    <groupId>org.springframework.cloud</groupId>
 		    <artifactId>spring-cloud-starter-loadbalancer</artifactId>

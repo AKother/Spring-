@@ -1,6 +1,6 @@
 spring:
     application:
-     name: eureka-server 
+     name: eureka-server # 让Spring Cloud Config知晓
     cloud:
         config: 
             uri: http://configserver:8071

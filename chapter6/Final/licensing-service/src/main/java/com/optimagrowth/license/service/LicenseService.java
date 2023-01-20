@@ -56,6 +56,7 @@ public class LicenseService {
 	private Organization retrieveOrganizationInfo(String organizationId, String clientType) {
 		Organization organization = null;
 
+        // 不同方式调用organization服务，根据ID获取organization
 		switch (clientType) {
 		case "feign":
 			System.out.println("I am using the feign client");

@@ -44,6 +44,7 @@ public class LicenseServiceApplication {
 		return messageSource;
 	}
 
+    // 保证能用到我们自己定义的UserContextInterceptor
 	@SuppressWarnings("unchecked")
 	@LoadBalanced
 	@Bean

@@ -28,6 +28,7 @@ public class TrackingFilter implements GlobalFilter {
 			logger.debug("tmx-correlation-id found in tracking filter: {}. ", 
 					filterUtils.getCorrelationId(requestHeaders));
 		} else {
+            // 如果不存在关联ID，则为其创建
 			String correlationID = generateCorrelationId();
 			exchange = filterUtils.setCorrelationId(exchange, correlationID);
 			logger.debug("tmx-correlation-id generated in tracking filter: {}.", correlationID);

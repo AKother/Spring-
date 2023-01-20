@@ -108,7 +108,7 @@ public class LicenseService {
 		String responseMessage = null;
 		License license = new License();
 		license.setLicenseId(licenseId);
-		licenseRepository.delete(license);
+		licenseRepository.dwelete(license);
 		responseMessage = String.format(messages.getMessage("license.delete.message", null, null),licenseId);
 		return responseMessage;
 

@@ -10,6 +10,7 @@ import com.optimagrowth.license.model.Organization;
 
 @Component
 public class OrganizationRestTemplateClient {
+
     @Autowired
     RestTemplate restTemplate;
 

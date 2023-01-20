@@ -19,9 +19,10 @@ public class LicenseServiceApplication {
 	@Bean
 	public LocaleResolver localeResolver() {
 		SessionLocaleResolver localeResolver = new SessionLocaleResolver();
-		localeResolver.setDefaultLocale(Locale.US);
+		localeResolver.setDefaultLocale(Locale.US); // 设置US为默认时区
 		return localeResolver;
 	}
+
 	@Bean
 	public ResourceBundleMessageSource messageSource() {
 		ResourceBundleMessageSource messageSource = new ResourceBundleMessageSource();

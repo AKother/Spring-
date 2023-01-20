@@ -10,6 +10,7 @@ import org.springframework.http.HttpHeaders;
 
 import reactor.core.publisher.Mono;
 
+// 后置过滤器
 @Configuration
 public class ResponseFilter {
  
@@ -25,6 +26,7 @@ public class ResponseFilter {
             	  HttpHeaders requestHeaders = exchange.getRequest().getHeaders();
             	  String correlationId = filterUtils.getCorrelationId(requestHeaders);
             	  logger.debug("Adding the correlation id to the outbound headers. {}", correlationId);
+                  // 将关联ID注入回Http请求头中
                   exchange.getResponse().getHeaders().add(FilterUtils.CORRELATION_ID, correlationId);
                   logger.debug("Completing outgoing request for {}.", exchange.getRequest().getURI());
               }));
